@@ -3,6 +3,10 @@ function solve(arr){
     let matches = arr.match(regex) || [];
     let cleanedWords = matches.map(word => word.slice(1));
 
+    for (let x of matches){
+        console.log(x.slice(1))
+    }
+
     console.log(cleanedWords.join("\n"))
 }
 
