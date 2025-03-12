@@ -7,18 +7,22 @@ function solve(arrInfo) {
        }
     }
 
-    let typeList = arrInfo.pop()
+    let typeListSong = arrInfo.pop()
     let arrSongs = []
 
     for (let i = 1; i < arrInfo.length; i++){
-        let [type, name, duration] = arrInfo[i].split('_')
-        if (type === typeList || typeList === 'all') {
-            arrSongs.push(name)
+            let [type, name, duration] = arrInfo[i].split('_')
+
+            let objSong = new Song(type, name, duration)
+
+            if (objSong.typeList === typeListSong || typeListSong === 'all' ){
+                arrSongs.push(objSong.name)
+            }
         }
+
+        return arrSongs.join('\n')
     }
 
-    return arrSongs.join('\n')
-}
 
 console.log(solve(
     [2,
