@@ -4,5 +4,5 @@ function subtract() {
 
     sum = num1 - num2;
 
-    document.getElementById('result').textContent = sum
+    document.getElementById('result').textContent = sum;
 }

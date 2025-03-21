@@ -1,3 +1,18 @@
 function solve() {
-   //TODO
+   let matches = document.querySelectorAll('tbody tr')
+   let inputString = document.getElementById('searchField').value;
+
+   if (inputString === '') {
+        return;
+    }
+
+   for (let x of matches){
+       console.log(inputString)
+       console.log(x.textContent)
+
+       if (x.textContent.includes(inputString)){
+           x.classList.add('select')
+       }
+   }
+
 }
