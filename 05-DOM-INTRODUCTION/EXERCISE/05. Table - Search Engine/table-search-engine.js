@@ -2,6 +2,10 @@ function solve() {
    let matches = document.querySelectorAll('tbody tr')
    let inputString = document.getElementById('searchField').value;
 
+   for (let row of matches) {
+        row.classList.remove('select');
+    }
+
    if (inputString === '') {
         return;
     }
@@ -14,5 +18,7 @@ function solve() {
            x.classList.add('select')
        }
    }
+
+   document.getElementById('searchField').value = '';
 
 }
