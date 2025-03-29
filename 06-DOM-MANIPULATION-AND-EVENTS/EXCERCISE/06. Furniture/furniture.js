@@ -7,10 +7,6 @@ function solve() {
     generateBtn.addEventListener('click', onGenerate)
     buyBtn.addEventListener('click', onBuy)
 
-    let product = [];
-    let totalPrice = 0;
-    let accumulateDeFactor = 0;
-
     function onGenerate(event) {
         event.preventDefault();
 
@@ -22,10 +18,6 @@ function solve() {
             let name = x['name'];
             let price = x['price'];
             let decFactor = x['decFactor'];
-
-            product.push(name);
-            totalPrice += price;
-            accumulateDeFactor += decFactor;
 
             let row = document.createElement('tr');
 
