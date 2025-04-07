@@ -18,7 +18,6 @@ function manageAstronauts(information) {
 
     action(allInfo, information.splice(astronauts_count));
 
-    // 🔽 Вложена функция: обработка на командите
     function action(obj, commands) {
         for (let command of commands) {
             if (command === 'End') {
@@ -58,7 +57,6 @@ function manageAstronauts(information) {
         }
     }
 
-    // 🔽 Вложена функция: намиране на астронавт по име
     function findObj(obj, name) {
         for (let i = 0; i < obj.length; i++) {
             if (obj[i].name === name) {
