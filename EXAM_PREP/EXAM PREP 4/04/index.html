@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Нова Поръчка</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Създай нова поръчка</h2>
+
+    <form id="orderForm">
+      <label>
+        Дата на заявка:
+        <input type="date" id="orderDate" required>
+      </label>
+
+      <label>
+        Дата на разтоварване:
+        <input type="date" id="unloadDate" required>
+      </label>
+
+      <label>
+        Влекач:
+        <input type="text" id="truck" required>
+      </label>
+
+      <label>
+        Цистерна:
+        <input type="text" id="trailer" required>
+      </label>
+
+      <label>
+        Петролна база:
+        <input type="text" id="depot" required>
+      </label>
+
+      <label>
+        Продукт:
+        <input type="text" id="product" required>
+      </label>
+
+      <label>
+        Количество (литри):
+        <input type="number" id="quantity" required>
+      </label>
+
+      <div class="buttons">
+        <button type="submit" id="submit">Изпрати</button>
+        <button type="button" id="get">Зареди данни</button>
+      </div>
+    </form>
+
+    <div id="info"></div>
+  </div>
+
+  <script src="test.js"></script>
+</body>
+</html>
